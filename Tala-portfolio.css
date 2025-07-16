@@ -1,0 +1,151 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #f5f5f5;
+}
+
+/* Navbar */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+#navbar a {
+  color: #ff1a1a;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+#navbar a:hover {
+  color: #f5f5f5;
+}
+
+/* Welcome Section */
+#welcome-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a1a1a 60%, #ff1a1a);
+  text-align: center;
+  padding: 2rem;
+}
+
+#welcome-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#welcome-section p {
+  font-size: 1.5rem;
+  max-width: 600px;
+}
+
+/* Projects Section */
+#projects {
+  padding: 5rem 2rem;
+  background: #141414;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #ff1a1a;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-tile {
+  background: #1f1f1f;
+  padding: 2rem;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+}
+
+.project-tile:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.5);
+}
+
+.project-tile a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 1.3rem;
+  display: block;
+}
+
+/* Contact Section */
+#contact {
+  padding: 5rem 2rem;
+  background: #0d0d0d;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ff1a1a;
+}
+
+#profile-link {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #f5f5f5;
+  background: #ff1a1a;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+#profile-link:hover {
+  background: #e60000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #welcome-section h1 {
+    font-size: 2.2rem;
+  }
+
+  #welcome-section p {
+    font-size: 1.2rem;
+  }
+
+  #navbar ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
